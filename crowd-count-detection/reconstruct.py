@@ -8,7 +8,7 @@ def reconstruct_path(image_id: int) -> str:
     :return: Relative path to the image
     """
     image_id = str(image_id).rjust(6, '0')
-    return f'frames/seq_{image_id}.jpg'
+    return f'seq_{image_id}.jpg'
 
 data = pd.read_csv('labels.csv')
 data['path'] = data['id'].apply(reconstruct_path)
