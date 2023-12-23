@@ -12,7 +12,7 @@ os.makedirs("labels", exist_ok=True)
 for index, row in data.iterrows():
     image_name = row["Image Index"]
     label = row["Finding Label"]
-    x = row["BBox [x"]
+    x = row["Bbox [x"]
     y = row["y"]
     w = row["w"]
     h = row["h]"]
