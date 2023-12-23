@@ -1,7 +1,10 @@
-nc: 5
+nc: 8
 names:
-- lift
-- car
-- dock
-- boat
-- jetski
+- Atelectasis
+- Cardiomegaly
+- Effusion
+- Infiltrate
+- Mass
+- Nodule
+- Pneumonia
+- Pneumothorax
