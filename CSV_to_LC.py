@@ -9,7 +9,7 @@ data = pd.read_csv("BBox_List_2017.csv")
 os.makedirs("labels", exist_ok=True)
 
 # Get unique label names and create a list
-unique_labels = list(data["label"].unique())
+unique_labels = list(data["Finding Label"].unique())
 
 # Create a dictionary to map label names to their indices
 label_to_index = {label: i for i, label in enumerate(unique_labels)}
