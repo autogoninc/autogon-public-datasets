@@ -1,12 +1,14 @@
 import pandas as pd
 from PIL import Image
 import os
+import shutil  # Import shutil for file copying
 
 # Load the CSV data
 data = pd.read_csv("BBox_List_2017.csv")
 
-# Create the 'labels' directory if it doesn't exist
+# Create the 'labels' and 'data' directories if they don't exist
 os.makedirs("labels", exist_ok=True)
+os.makedirs("images", exist_ok=True)  # Create the 'data' directory
 
 # Get unique label names and create a list
 unique_labels = list(data["Finding Label"].unique())
@@ -27,7 +29,7 @@ for index, row in data.iterrows():
     label_index = label_to_index[label]
 
     # Load the image using PIL to get its dimensions
-    image = Image.open(os.path.join("images", image_name))
+    image = Image.open(os.path.join("all_images", image_name))
     image_width, image_height = image.size
 
     # Convert bounding box coordinates to YOLO format (normalized coordinates)
@@ -47,5 +49,10 @@ for index, row in data.iterrows():
     ) as f:
         f.write(label_text)
 
-print("Label files created successfully!")
+    # Copy the image to the 'data' directory
+    source_image_path = os.path.join("all_images", image_name)
+    destination_image_path = os.path.join("images", image_name)
+    shutil.copyfile(source_image_path, destination_image_path)
+
+print("Label files and all_images copied successfully!")
 print("Unique label names:", unique_labels)
