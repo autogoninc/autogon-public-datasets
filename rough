@@ -1,0 +1,7 @@
+{"x-ray model": {"model_url": "https://storage.autogon.ai/efea2397-cc90-40e9-b3b6-fc1db9d8135f.pth", "function_code": "OBJ_DET", "metrics": {"Precision@0.50": 0.012801614589989185, "Classification Loss": null, "IoU Loss": null, "Dynamic Focal Loss": null, "Total Loss": null, "Mean Average Precision@0.50": 0.1305745393037796, "Recall@0.50": 0.3604099154472351, "F1 Score@0.50": 0.024280695244669914, "Training Time (secs)": 54000.822122335434}, "labels": ["Effusion", "Infiltrate", "Atelectasis", "Mass", "Pneumonia", "Nodule", "Cardiomegaly", "Pneumothorax"], "type": "large", "image_dimensions": [1024, 1024]}}
+
+
+{ "completed": true, "status": "successful", "model_name": "x-ray model", "start_time": "2024-01-06 15:14:03.832997", "train_start_time": "2024-01-06 15:14:03.845712", "end_time": "2024-01-06 15:16:22.229894", "data": {"model_url": "https://storage.autogon.ai/efea2397-cc90-40e9-b3b6-fc1db9d8135f.pth", "function_code": "OBJ_DET", "metrics": {"Precision@0.50": 0.012801614, "Classification Loss": null, "IoU Loss": null, "Dynamic Focal Loss": null, "Total Loss": null, "Mean Average Precision@0.50": 0.1305745, "Recall@0.50": 0.3604099, "F1 Score@0.50": 0.0242807, "Training Time (secs)": 54000.822}, "labels": ["Effusion", "Infiltrate", "Atelectasis", "Mass", "Pneumonia", "Nodule", "Cardiomegaly", "Pneumothorax"], "type": "large", "image_dimensions": [1024, 1024], "model_name": "x-ray model" }, "bill": 32440 }
+
+
+{'Precision@0.50': 0.012801614589989185, 'Recall@0.50': 0.3604099154472351, 'mAP@0.50': 0.1305745393037796, 'F1@0.50': 0.024280695244669914}
